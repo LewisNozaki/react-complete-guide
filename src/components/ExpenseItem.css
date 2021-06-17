@@ -17,7 +17,6 @@
   flex-flow: column-reverse;
   justify-content: flex-start;
   flex: 1;
-  border: 1px solid white;
 }
 
 .expense-item h2 {
