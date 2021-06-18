@@ -27,7 +27,7 @@ const App = () => {
       date: new Date(2021, 5, 12),
     },
   ];
-  
+
   return (
     <div>
       <h1>Let's get started.</h1>
@@ -38,7 +38,7 @@ const App = () => {
             id={expense.id}
             title={expense.title}
             amount={expense.amount}
-            date={expense.date.toDateString()}
+            date={expense.date}
           />
         )
       })}
