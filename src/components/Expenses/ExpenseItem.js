@@ -4,6 +4,8 @@ import Card from "../UI/Card";
 import "./ExpenseItem.css";
 
 const ExpenseItem = ({title, amount, date}) => {
+  const handleClick = () => title = "updated";
+  
   return (
     <Card className="expense-item">
       <ExpenseDate 
@@ -13,6 +15,8 @@ const ExpenseItem = ({title, amount, date}) => {
         <h2>{title}</h2>
         <div className="expense-item__price">${amount}</div>
       </div>
+
+      <button onClick={handleClick}>change title</button>
     </Card>
   )
 } 
