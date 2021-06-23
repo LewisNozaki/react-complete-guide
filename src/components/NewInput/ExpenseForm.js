@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./ExpenseForm.css";
 
-const ExpenseForm = () => {
+const ExpenseForm = ({ onSaveExpenseData }) => {
   const [ inputTitle, setInputTitle ] = useState("");
   const [ inputAmount, setInputAmount ] = useState("");
   const [ inputDate, setInputDate ] = useState("");
@@ -13,11 +13,14 @@ const ExpenseForm = () => {
   const handleFormSubmit = e => {
     e.preventDefault();
 
-    console.table({
-      inputTitle,
-      inputAmount,
-      inputDate,
-    })
+    const newExpenseData = {
+      title: inputTitle,
+      amount: inputAmount,
+      date: new Date(inputDate),
+    };
+    
+    // Passing state back up to parent NewExpense.js
+    onSaveExpenseData(newExpenseData);
 
     // Resets default value
     setInputTitle("");

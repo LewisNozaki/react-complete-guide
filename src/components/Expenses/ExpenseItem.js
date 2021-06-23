@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import ExpenseDate from "./ExpenseDate";
 import Card from "../UI/Card";
 import "./ExpenseItem.css";
 
 const ExpenseItem = ({title, amount, date}) => {
-  const [ expenseTitle, setExpenseTitle ] = useState(title);
+  // const [ expenseTitle, setExpenseTitle ] = useState(title);
 
-  const handleClick = () => setExpenseTitle("updated");
+  // const handleClick = () => setExpenseTitle("updated");
   
   return (
     <Card className="expense-item">
@@ -14,11 +14,11 @@ const ExpenseItem = ({title, amount, date}) => {
         date={date}
       />
       <div className="expense-item__description">
-        <h2>{expenseTitle}</h2>
+        <h2>{title}</h2>
         <div className="expense-item__price">${amount}</div>
       </div>
 
-      <button onClick={handleClick}>change title</button>
+      {/* <button onClick={handleClick}>change title</button> */}
     </Card>
   )
 } 
