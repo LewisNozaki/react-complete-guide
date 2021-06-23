@@ -6,10 +6,28 @@ const ExpenseForm = () => {
   const [ inputAmount, setInputAmount ] = useState("");
   const [ inputDate, setInputDate ] = useState("");
 
-  const handleTitleChange = (e) => setInputTitle(e.target.value);
-  const handleAmountChange = (e) => setInputAmount(e.target.value);
-  const handleDateChange = (e) => setInputDate(e.target.value);
+  const handleTitleChange = e => setInputTitle(e.target.value);
+  const handleAmountChange = e => setInputAmount(e.target.value);
+  const handleDateChange = e => setInputDate(e.target.value);
   
+  /* Alternative method - If you want to group multiple states into one object. 
+     This is personal preference. */
+
+  // const [ userInput, setUserIput ] = useState({
+  //   inputTitle: "",
+  //   inputAmount: "",
+  //   inputDate: "",
+  // })
+
+  // const handleTitleChange = e => {
+  //   return setInputTitle((prevState) => {
+  //     return {
+  //       ...prevState,
+  //       inputTitle: e.target.value
+  //     }
+  //   })
+  // }
+
   return (
     <form>
       <div className="new-expense__controls">
