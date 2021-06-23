@@ -4,8 +4,8 @@ import Card from "../UI/Card";
 import "./ExpenseItem.css";
 
 const ExpenseItem = ({title, amount, date}) => {
-  const [expenseTitle, setExpenseTitle] = useState(title);
-  
+  const [ expenseTitle, setExpenseTitle ] = useState(title);
+
   const handleClick = () => setExpenseTitle("updated");
   
   return (
