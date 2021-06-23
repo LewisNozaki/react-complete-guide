@@ -9,7 +9,17 @@ const ExpenseForm = () => {
   const handleTitleChange = e => setInputTitle(e.target.value);
   const handleAmountChange = e => setInputAmount(e.target.value);
   const handleDateChange = e => setInputDate(e.target.value);
-  
+
+  const handleFormSubmit = e => {
+    e.preventDefault();
+
+    console.table({
+      inputTitle,
+      inputAmount,
+      inputDate,
+    })
+  };
+
   /* Alternative method - If you want to group multiple states into one object. 
      This is personal preference. */
 
@@ -29,7 +39,7 @@ const ExpenseForm = () => {
   // }
 
   return (
-    <form>
+    <form onSubmit={handleFormSubmit}>
       <div className="new-expense__controls">
         <div className="new-expense__control">
           <label htmlFor="title">Title</label>
