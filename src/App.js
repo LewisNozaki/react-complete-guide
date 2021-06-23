@@ -29,15 +29,17 @@ const App = () => {
       date: new Date(2021, 5, 12),
     },
   ])
-
+  
   const handleAddNewItem = (item) => {
     setExpenses((prevState) => [...prevState, item]);
   }
+
+  let length = expenses.length;
   
   return (
     <div>
       <NewExpense 
-        expenses={expenses}
+        length={length}
         onAddNewItem={handleAddNewItem}
       />
       <Expenses 

@@ -2,14 +2,14 @@ import React from "react";
 import ExpenseForm from "./ExpenseForm";
 import "./NewExpense.css";
 
-const NewExpense = ({ expenses, onAddNewItem }) => {
+const NewExpense = ({ length, onAddNewItem }) => {
   const handleSaveExpenseData = (enteredExpenseData) => {
     const expenseData = {
       ...enteredExpenseData,
-      id: `e${expenses.length}`,
+      id: `e${length}`,
     }
-
-    // console.table(expenseData);
+    
+    console.table(expenseData);
 
     // Passing the new item (with id) back to App.js
     onAddNewItem(expenseData);

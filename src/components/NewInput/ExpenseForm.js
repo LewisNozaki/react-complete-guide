@@ -12,13 +12,13 @@ const ExpenseForm = ({ onSaveExpenseData }) => {
 
   const handleFormSubmit = e => {
     e.preventDefault();
-
+    
     const newExpenseData = {
       title: inputTitle,
       amount: inputAmount,
       date: new Date(inputDate),
     };
-    
+
     // Passing state back up to parent NewExpense.js
     onSaveExpenseData(newExpenseData);
 
