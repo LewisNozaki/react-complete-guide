@@ -49,10 +49,6 @@ const ExpenseForm = ({ onSaveExpenseData, onCancelBtn }) => {
     })
   }
   */
-  
-  const handleCancelBtn = () => {
-    onCancelBtn();
-  }
 
   return (
     <form onSubmit={handleFormSubmit}>
@@ -92,9 +88,9 @@ const ExpenseForm = ({ onSaveExpenseData, onCancelBtn }) => {
           />
         </div>
       </div>
-
+    
       <div className="new-expense__actions">
-        <button onClick={handleCancelBtn}>Cancel</button>
+        <button type="button" onClick={onCancelBtn}>Cancel</button>
         <button type="submit">Add Expense</button>
       </div>
     </form>

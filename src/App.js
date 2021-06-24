@@ -35,7 +35,7 @@ const App = () => {
   const handleAddNewItem = (item) => {
     setExpenses((prevState) => [item, ...prevState]);
   }
-
+  
   let length = expenses.length;
   
   return (

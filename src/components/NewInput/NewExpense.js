@@ -13,6 +13,8 @@ const NewExpense = ({ length, onAddNewItem }) => {
 
     // Passing the new item (with id) back to App.js
     onAddNewItem(expenseData);
+    // Close form once completed
+    toggleForm();
   }
   
   const toggleForm = () => setDisplayForm(!displayForm);
@@ -20,7 +22,7 @@ const NewExpense = ({ length, onAddNewItem }) => {
   return (
     <div className="new-expense">
       {!displayForm && 
-        <button onClick={toggleForm}>Add New Item</button>}
+        <button onClick={toggleForm}>Add New Expense</button>}
       {displayForm &&
         <ExpenseForm 
           onSaveExpenseData={handleSaveExpenseData}
