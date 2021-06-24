@@ -8,8 +8,6 @@ const NewExpense = ({ length, onAddNewItem }) => {
       ...enteredExpenseData,
       id: `e${length}`,
     }
-    
-    console.table(expenseData);
 
     // Passing the new item (with id) back to App.js
     onAddNewItem(expenseData);
