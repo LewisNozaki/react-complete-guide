@@ -7,9 +7,7 @@ import "./Expenses.css";
 const Expenses = ({ expenses }) => {
   const [ filterYear, setFilterYear ] = useState("2021");
   
-  const getYearFromFilter = (year) => {
-    setFilterYear(year);
-  };
+  const getYearFromFilter = year => setFilterYear(year);
 
   return (
     <Card className="expenses">

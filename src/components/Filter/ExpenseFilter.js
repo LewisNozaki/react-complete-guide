@@ -5,7 +5,7 @@ const ExpenseFilter = ({ onFilterYearSelect, selected }) => {
   const handleFilterChange = (e) => {
     onFilterYearSelect(e.target.value);
   };
-
+  
   return (
     <div className='expenses-filter'>
       <div className='expenses-filter__control'>
