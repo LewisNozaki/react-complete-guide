@@ -10,7 +10,7 @@ const NewExpense = ({ length, onAddNewItem }) => {
       ...enteredExpenseData,
       id: `e${length}`,
     }
-
+    
     // Passing the new item (with id) back to App.js
     onAddNewItem(expenseData);
     // Close form once completed

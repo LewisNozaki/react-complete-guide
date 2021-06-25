@@ -9,16 +9,18 @@ const ExpenseForm = ({ onSaveExpenseData, onCancelBtn }) => {
   const handleTitleChange = e => setInputTitle(e.target.value);
   const handleAmountChange = e => setInputAmount(e.target.value);
   const handleDateChange = e => setInputDate(e.target.value);
-
+  
   const handleFormSubmit = e => {
     e.preventDefault();
     
     const newExpenseData = {
       title: inputTitle,
-      amount: inputAmount,
-      date: new Date(inputDate),
+      amount: Number(inputAmount),
+      date: inputDate,
     };
 
+    console.log(newExpenseData)
+    
     // Passing state back up to parent NewExpense.js
     onSaveExpenseData(newExpenseData);
 
